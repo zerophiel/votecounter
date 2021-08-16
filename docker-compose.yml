@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: 'votecounter_db'
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: votecount
+      POSTGRES_PASSWORD: v0t3c0nt3r
+      POSTGRES_DB: votecount
