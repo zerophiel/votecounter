@@ -15,3 +15,13 @@ services:
     restart: always
     ports:
       - 8080:8080
+    depends_on:
+      - db
+  frontend:
+    container_name: 'votecounter_fe'
+    image: zerophiel/votecounterfe:latest
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - app
